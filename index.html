@@ -1,0 +1,64 @@
+<!-- template.html -->
+<html>
+  <head>
+    <title>React ToDo</title>
+    <script src="http://fb.me/react-0.10.0.js"></script>
+    <script src="http://fb.me/JSXTransformer-0.10.0.js"></script>
+    <script src="http://code.jquery.com/jquery-1.10.0.min.js"></script>
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/showdown/0.3.1/showdown.min.js"></script>
+    <link href="http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.0.0-rc2/css/bootstrap.css" type="text/css" />
+    <style type="text/css">
+      body {
+        padding: 20px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app"></div>
+    <script type="text/jsx">
+
+      var Title = React.createClass({
+        var appName = "React ToDo";
+
+        render: function(){
+          return (
+            <h2>
+              {appName}
+            </h2>
+          );
+        }
+      });
+      
+      var List = React.createClass({
+        render: function(){
+          return (
+            <div className="itemsList">
+            <p>items here</p>
+            </div>
+          );
+        }
+      });
+
+      var Form = React.createClass({
+        render: function(){
+          return (
+            <input type="text" />
+            <input type="submit" />
+          );
+        }
+      });
+
+      var App = React.createClass({
+        render: function(){
+          return (
+            <div className="app">
+            <Title />
+            <List />
+            <Form />
+            </div>
+          );
+        }
+      });
+    </script>
+  </body>
+</html>
